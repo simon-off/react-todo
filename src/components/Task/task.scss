@@ -1,0 +1,49 @@
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: var(--border-bottom);
+
+  padding: 0.5rem 1rem;
+  // prettier-ignore
+  background-image: linear-gradient(
+    90deg,
+    rgba(0 0 0 / 0) -10%,
+    rgba(100, 180, 255, 0.025) 15%,
+    rgba(100, 180, 255, 0.025) 85%,
+    rgba(0 0 0 / 0) 110%
+  );
+
+  > div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  button {
+    border: 1px solid var(--color-accent);
+
+    &:hover {
+      border: 1px solid var(--color-focus);
+    }
+  }
+
+  p {
+    transition: var(--time-medium);
+    text-shadow: var(--text-shadow);
+  }
+
+  input[type="checkbox"] {
+    background-color: black;
+    border: none;
+    outline: none;
+    height: 2rem;
+  }
+}
+
+.done {
+  p {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+}
