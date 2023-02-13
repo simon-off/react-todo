@@ -7,7 +7,7 @@ export default function Task({ task, tasks, setTasks }) {
   useEffect(() => {
     task.checked = !checked;
     setTasks([...tasks.sort((a, b) => b.checked - a.checked)]);
-  }, [checked]);
+  }, [checked, setTasks, task, tasks]);
 
   const removeTask = () => {
     setTasks(tasks.filter((el) => el.id !== task.id));
